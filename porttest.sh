@@ -5,7 +5,7 @@ set -ex
 pwd
 
 cd /usr
-la -a ports
+ls -a ports
 svnlite co svn://svn.freebsd.org/ports/head ports
 
 df -h
