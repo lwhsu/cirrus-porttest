@@ -4,9 +4,11 @@ set -ex
 
 pwd
 
-cd /usr
-ls -a ports
-svnlite co svn://svn.freebsd.org/ports/head ports
+#cd /usr
+#ls -a ports
+#svnlite co svn://svn.freebsd.org/ports/head ports
+cd /usr/ports
+make update
 
 df -h
 
