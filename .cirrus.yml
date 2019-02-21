@@ -3,6 +3,7 @@ env:
   ARCH: amd64
 
 task:
+  timeout_in: 120m
   freebsd_instance:
     matrix:
       image: freebsd-13-0-current-amd64-v20190117
