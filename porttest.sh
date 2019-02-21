@@ -8,7 +8,7 @@ cd /usr
 #ls -al ports
 mv ports ports.old
 #svnlite co svn://svn.freebsd.org/ports/head ports
-portsnap fetch extract
+portsnap --interactive fetch extract
 
 df -h
 
