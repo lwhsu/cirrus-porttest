@@ -5,10 +5,10 @@ set -ex
 pwd
 
 cd /usr
-ls -al ports
+#ls -al ports
+mv ports ports.old
 #svnlite co svn://svn.freebsd.org/ports/head ports
-cd /usr/ports
-make update
+portsnap fetch extract
 
 df -h
 
