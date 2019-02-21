@@ -34,8 +34,8 @@ PWD=`pwd -P`
 PORTDIR=`dirname ${PWD}`
 PORTDIR=`dirname ${PORTDIR}`
 make all-depends-list | sed -e "s,${PORTDIR}/,," | xargs sudo pkg fetch -y -o pkgs
-rm -fr /usr/local/poudriere/data/packages/jail-default/All
-mv pkgs/All /usr/local/poudriere/data/packages/jail-default/
+rm -fr /usr/local/poudriere/data/packages/jail-default/.latest/All
+mv pkgs/All /usr/local/poudriere/data/packages/jail-default/.latest/
 rm -fr pkgs
 
 poudriere testport -j jail ${PORT}
