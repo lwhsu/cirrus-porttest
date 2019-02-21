@@ -9,6 +9,7 @@ cd /usr
 mv ports ports.old
 #svnlite co svn://svn.freebsd.org/ports/head ports
 portsnap --interactive fetch extract
+mkdir /usr/ports/distfiles
 
 df -h
 
