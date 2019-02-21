@@ -4,8 +4,8 @@ set -ex
 
 pwd
 
-#cd /usr
-#ls -a ports
+cd /usr
+ls -al ports
 #svnlite co svn://svn.freebsd.org/ports/head ports
 cd /usr/ports
 make update
