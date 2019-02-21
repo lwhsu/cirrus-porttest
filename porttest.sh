@@ -31,7 +31,8 @@ PWD=`pwd -P`
 PORTDIR=`dirname ${PWD}`
 PORTDIR=`dirname ${PORTDIR}`
 make all-depends-list | sed -e "s,${PORTDIR}/,," | xargs sudo pkg fetch -y -o pkgs
-mv pkgs/All/* /usr/local/poudriere/data/packages/jail-default/.latest/all/
+rm -fr /usr/local/poudriere/data/packages/jail-default/All
+mv pkgs/All /usr/local/poudriere/data/packages/jail-default/
 rm -fr pkgs
 
 poudriere testport -j jail editors/libreoffice
