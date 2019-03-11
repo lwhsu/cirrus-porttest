@@ -19,6 +19,7 @@ df -h
 echo "NO_ZFS=yes" >> /usr/local/etc/poudriere.conf
 echo "ALLOW_MAKE_JOBS=yes" >> /usr/local/etc/poudriere.conf
 sed -i.bak -e 's,FREEBSD_HOST=_PROTO_://_CHANGE_THIS_,FREEBSD_HOST=https://download.FreeBSD.org,' /usr/local/etc/poudriere.conf
+mkdir -p /usr/local/poudriere
 
 poudriere jail -c -j jail -v `uname -r`
 poudriere ports -c -f none -m null -M /usr/ports
