@@ -26,7 +26,7 @@ poudriere ports -c -f none -m null -M /usr/ports
 # use an easy port to bootstrap pkg repo
 poudriere bulk -t -j jail net/nc
 
-PORT=x11-servers/xorg-server
+PORT=editors/libreoffice
 
 cd /usr/ports
 cd ${PORT}
